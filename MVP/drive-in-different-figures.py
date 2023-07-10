@@ -50,5 +50,32 @@ def runInCircle_2():
     backWheels.run_to_degrees_counted(fullCircle)
 
 
+def runInSquare():
+
+    backWheels.run_for_rotations(-2)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_for_rotations(-3.5)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_for_rotations(-2)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_for_rotations(-3.5)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_for_rotations(-2)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_for_rotations(-3.5)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_for_rotations(-2)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_for_rotations(-3.5)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+
 initiateTheRobot()
-runInCircle_2()
+runInSquare()

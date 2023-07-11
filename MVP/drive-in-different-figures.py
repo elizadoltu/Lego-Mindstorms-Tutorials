@@ -23,13 +23,11 @@ def initiateTheRobot():
     backWheels.run_to_position(0, 'shortest path')
 
 # First Method
-
-
 def runInCircle_1():
 
     # Maximum for front Wheels is 70 degrees
     # It depends on the speed
-    frontWheels.run_to_position(70, 'shortest path')  # Will turn left
+    frontWheels.run_to_position(70, 'shortest path')# Will turn left
     backWheels.run_for_rotations(-12.5)
     # Even it is negative, the car will move forward
     # Negative values - the motor will run counterclockwise
@@ -38,8 +36,6 @@ def runInCircle_1():
     # example : if the position of the motor is at 50 degrees and we want to go to position 0, it will turn counterclockwise; if it is at 195 degrees and we want to go to position 0, it will turn clockwise (360 degrees - our current position)
 
 # Second Method
-
-
 def runInCircle_2():
 
     # We saw in the previous method that we need 12.5 rotations of the motor to complete a circle
@@ -49,9 +45,10 @@ def runInCircle_2():
     fullCircle = 13 * -360
     backWheels.run_to_degrees_counted(fullCircle)
 
+# First Method
+def runInSquare_1():
 
-def runInSquare():
-
+    # Every block of instructions represents a side of the square
     backWheels.run_for_rotations(-2)
     frontWheels.run_to_position(70, 'shortest path')
     backWheels.run_for_rotations(-3.5)
@@ -76,6 +73,35 @@ def runInSquare():
     frontWheels.run_to_position(0, 'shortest path')
     wait_for_seconds(1)
 
+# Second Method 
+def runInSquare_2():
+
+    full_90_Degrees_turn = 4 * -360
+    movementOfBackWheels = 2 * 360
+
+    backWheels.run_to_degrees_counted(movementOfBackWheels)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_to_degrees_counted(full_90_Degrees_turn)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_to_degrees_counted(movementOfBackWheels)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_to_degrees_counted(full_90_Degrees_turn)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_to_degrees_counted(movementOfBackWheels)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_to_degrees_counted(full_90_Degrees_turn)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
+
+    backWheels.run_to_degrees_counted(movementOfBackWheels)
+    frontWheels.run_to_position(70, 'shortest path')
+    backWheels.run_to_degrees_counted(full_90_Degrees_turn)
+    frontWheels.run_to_position(0, 'shortest path')
+    wait_for_seconds(1)
 
 initiateTheRobot()
-runInSquare()
+runInSquare_1()
